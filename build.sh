@@ -12,12 +12,12 @@ AARCH64_TOOLCHAIN_FILENAME=gcc-arm-${AARCH64_TOOLCHAIN_VERSION}-x86_64-aarch64-n
 AARCH64_TOOLCHAIN_URL=https://developer.arm.com/-/media/Files/downloads/gnu-a/${AARCH64_TOOLCHAIN_VERSION}/binrel/${AARCH64_TOOLCHAIN_FILENAME}
 AARCH64_TOOLCHAIN_SHA256SUM=6f74b1ee370caeb716688d2e467e5b44727fdc0ed56023fe5c72c0620019ecef
 
-ATF_SOURCE_VERSION=2.8
-ATF_SOURCE_FILENAME=arm-trusted-firmware-v${ATF_SOURCE_VERSION}.tar.gz
-ATF_SOURCE_URL=https://codeload.github.com/ARM-software/arm-trusted-firmware/tar.gz/v${ATF_SOURCE_VERSION}
-ATF_SOURCE_SHA256SUM=42256fa354f32b09972e72e0570a0f73698785927f93163b1d1308c485fcb4a6
+ATF_SOURCE_VERSION=2.8.4
+ATF_SOURCE_FILENAME=trusted-firmware-a-lts-v${ATF_SOURCE_VERSION}.tar.gz
+ATF_SOURCE_URL=https://git.trustedfirmware.org/TF-A/trusted-firmware-a.git/snapshot/trusted-firmware-a-lts-v${ATF_SOURCE_VERSION}.tar.gz
+ATF_SOURCE_SHA256SUM=7258274ede27d8e9c233cab3931aab778c5fe8774bcc6f9426ad49e46907c3b1
 # Set fixed build timestamp for reproducible builds
-ATF_BUILD_EPOCH=1587398203
+ATF_BUILD_EPOCH=1587398223
 
 die() {
   echo "$@" 1>&2

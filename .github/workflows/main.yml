@@ -22,7 +22,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Check out repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Runs a set of commands using the runners shell
       - name: Prepare and run build
@@ -33,10 +33,11 @@ jobs:
           bash ./build.sh
 
       - name: Release build artifacts
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+        uses: ncipollo/release-action@v1.12.0
         with:
-          body_path: build_info.txt
-          files: output_dir/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
+          prerelease: false
+          name: V2.8.4
+          tag: V2.8.4
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: output_dir/*
