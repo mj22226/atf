@@ -107,6 +107,14 @@ for target in targets/*.sh; do
   rm -rf ${ATF_DIR}
 done
 
+# download ram_init.bin,rk3568_bl31.elf from https://github.com/rkbin/
+
+wget https://github.com/mj22226/rkbin/raw/2023.04/bin/rk35/rk3568_ddr_1056MHz_v1.15.bin -O output_dir/ram_init.bin
+sha256sum -c <<<"0547bfb6d90391216d2f138b5ca9e2f31185cfaf49d8ddc29ba5ca2fc292b4bb  output_dir/ram_init.bin"
+
+wget https://github.com/mj22226/rkbin/raw/2023.04/bin/rk35/rk3568_bl31_v1.37.elf -O output_dir/rk3568_bl31.elf
+sha256sum -c <<<"e6f8abaae908160a5d11d24bab0d68e8f8a80b6ac9ddd6166a059b1ee95313ef  output_dir/rk3568_bl31.elf"
+
 cat << EOF > build_info.txt
 build epoch: $ATF_BUILD_EPOCH
 
