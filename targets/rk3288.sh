@@ -1,5 +1,0 @@
-PLAT=rk3288
-TARGET=bl32
-BINARY_PATH=bl32/bl32.elf
-ARCH=arm
-MAKE_FLAGS="ARCH=aarch32 AARCH32_SP=sp_min"

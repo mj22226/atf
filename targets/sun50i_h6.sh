@@ -1,4 +1,0 @@
-PLAT=sun50i_h6
-TARGET=bl31
-BINARY_PATH=bl31.bin
-ARCH=aarch64
