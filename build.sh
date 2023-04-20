@@ -107,13 +107,22 @@ for target in targets/*.sh; do
   rm -rf ${ATF_DIR}
 done
 
-# download ram_init.bin,rk3568_bl31.elf from https://github.com/rkbin/
+# download ddr.bin,rk3568/88_bl31.elf from https://github.com/rkbin/
+# rk356x
 
-wget https://github.com/mj22226/rkbin/raw/2023.04/bin/rk35/rk3568_ddr_1056MHz_v1.15.bin -O output_dir/ram_init.bin
-sha256sum -c <<<"0547bfb6d90391216d2f138b5ca9e2f31185cfaf49d8ddc29ba5ca2fc292b4bb  output_dir/ram_init.bin"
+wget https://github.com/mj22226/rkbin/raw/2023.04/bin/rk35/rk3568_ddr_1056MHz_v1.15.bin -O output_dir/rk3568_ddr.bin
+sha256sum -c <<<"0547bfb6d90391216d2f138b5ca9e2f31185cfaf49d8ddc29ba5ca2fc292b4bb  output_dir/rk3568_ddr.bin"
 
 wget https://github.com/mj22226/rkbin/raw/2023.04/bin/rk35/rk3568_bl31_v1.37.elf -O output_dir/rk3568_bl31.elf
 sha256sum -c <<<"e6f8abaae908160a5d11d24bab0d68e8f8a80b6ac9ddd6166a059b1ee95313ef  output_dir/rk3568_bl31.elf"
+
+# rk3588
+
+wget https://raw.githubusercontent.com/mj22226/rkbin/2023.04/bin/rk35/rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.09.bin -O output_dir/rk3588_ddr.bin
+sha256sum -c <<<"6166b7b5758f415e3ff8044f832b1b361ba05b3d4ee716f9a26884d13f6e8b3b  output_dir/rk3588_ddr.bin"
+
+wget https://raw.githubusercontent.com/mj22226/rkbin/2023.04/bin/rk35/rk3588_bl31_v1.36.elf -O output_dir/rk3588_bl31.elf
+sha256sum -c <<<"88a109e98591fc10da5e9bd3ca2d6ec9101a9b5041510d83fc2197dacb95e9bd  output_dir/rk3588_bl31.elf"
 
 cat << EOF > build_info.txt
 build epoch: $ATF_BUILD_EPOCH
