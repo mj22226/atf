@@ -33,7 +33,7 @@ jobs:
         with:
           allowUpdates: true
           prerelease: true
-          name: V2.8-rk356x
+          name: V2.8.8-rk356x
           tag: ${{ env.EPOCH }}
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: output_dir/*

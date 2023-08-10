@@ -12,10 +12,10 @@ AARCH64_TOOLCHAIN_FILENAME=gcc-arm-${AARCH64_TOOLCHAIN_VERSION}-x86_64-aarch64-n
 AARCH64_TOOLCHAIN_URL=https://developer.arm.com/-/media/Files/downloads/gnu-a/${AARCH64_TOOLCHAIN_VERSION}/binrel/${AARCH64_TOOLCHAIN_FILENAME}
 AARCH64_TOOLCHAIN_SHA256SUM=6f74b1ee370caeb716688d2e467e5b44727fdc0ed56023fe5c72c0620019ecef
 
-ATF_SOURCE_VERSION=2.8.4
-ATF_SOURCE_FILENAME=trusted-firmware-a-f6f5b5576c158f24930f1dd3036310fe1a8e401c.tar.gz
-ATF_SOURCE_URL=https://git.trustedfirmware.org/TF-A/trusted-firmware-a.git/snapshot/trusted-firmware-a-f6f5b5576c158f24930f1dd3036310fe1a8e401c.tar.gz
-ATF_SOURCE_SHA256SUM=217ac00e8f39bc8384370163e4e1e4253787a35df78eb74e9e05a456d6981b22
+ATF_SOURCE_VERSION=2.8.8
+ATF_SOURCE_FILENAME=trusted-firmware-a-1c9b6581530f6fd09fc4d86a6fa54d1e9efba582.tar.gz
+ATF_SOURCE_URL=https://git.trustedfirmware.org/TF-A/trusted-firmware-a.git/snapshot/trusted-firmware-a-1c9b6581530f6fd09fc4d86a6fa54d1e9efba582.tar.gz
+ATF_SOURCE_SHA256SUM=60e5708550eb3c818ce8bf416bfa1bc8c294bccf4f7e44bea01b18c6e57d2c62
 # Set fixed build timestamp for reproducible builds
 ATF_BUILD_EPOCH=$(date +%s)
 
