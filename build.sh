@@ -12,10 +12,10 @@ AARCH64_TOOLCHAIN_FILENAME=gcc-arm-${AARCH64_TOOLCHAIN_VERSION}-x86_64-aarch64-n
 AARCH64_TOOLCHAIN_URL=https://developer.arm.com/-/media/Files/downloads/gnu-a/${AARCH64_TOOLCHAIN_VERSION}/binrel/${AARCH64_TOOLCHAIN_FILENAME}
 AARCH64_TOOLCHAIN_SHA256SUM=6f74b1ee370caeb716688d2e467e5b44727fdc0ed56023fe5c72c0620019ecef
 
-ATF_SOURCE_VERSION=2.8.7
-ATF_SOURCE_FILENAME=trusted-firmware-a-lts-v${ATF_SOURCE_VERSION}.tar.gz
-ATF_SOURCE_URL=https://git.trustedfirmware.org/TF-A/trusted-firmware-a.git/snapshot/trusted-firmware-a-lts-v${ATF_SOURCE_VERSION}.tar.gz
-ATF_SOURCE_SHA256SUM=e6f98ed012afdce9e075380b35a9f8f42e4d944a43793071438ed246fa354260
+ATF_SOURCE_VERSION=2.9.1
+ATF_SOURCE_FILENAME=arm-trusted-firmware-2.9.1.tar.gz
+ATF_SOURCE_URL=https://github.com/mj22226/arm-trusted-firmware//archive/refs/tags/v2.9.1/arm-trusted-firmware-2.9.1.tar.gz
+ATF_SOURCE_SHA256SUM=4c027dfc218d285f3d7ddbb168bc393aa34419d3612aed354f12cd1f48cacb59
 # Set fixed build timestamp for reproducible builds
 ATF_BUILD_EPOCH=$(date +%s)
 
@@ -113,16 +113,10 @@ done
 wget https://github.com/rockchip-linux/rkbin/raw/master/bin/rk35/rk3568_ddr_1560MHz_v1.18.bin -O output_dir/rk3568_ddr.bin
 sha256sum -c <<<"9e6200ca13f846379bae703b036d42e280888ab3a8143999380bdc9898d04322 output_dir/rk3568_ddr.bin"
 
-wget https://github.com/rockchip-linux/rkbin/raw/master/bin/rk35/rk3568_bl31_v1.43.elf -O output_dir/rk3568_bl31.elf
-sha256sum -c <<<"53b9371beeaa0c6a3c0235a0f069adc719ff9028a7863772ce5eef24156ab07c output_dir/rk3568_bl31.elf"
-
 # rk3588
 
 wget https://github.com/rockchip-linux/rkbin/raw/master/bin/rk35/rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.12.bin -O output_dir/rk3588_ddr.bin
 sha256sum -c <<<"ab20fa76d5535bb95c427b117b242510316b8c27889639dd0c4c2a44832cfb2f  output_dir/rk3588_ddr.bin"
-
-wget https://github.com/rockchip-linux/rkbin/raw/master/bin/rk35/rk3588_bl31_v1.40.elf -O output_dir/rk3588_bl31.elf
-sha256sum -c <<<"28bc9ed587d01167098228530cad114482e1f30faa1a6d9744bfc7b05944d36f output_dir/rk3588_bl31.elf"
 
 cat << EOF > build_info.txt
 build epoch: $ATF_BUILD_EPOCH

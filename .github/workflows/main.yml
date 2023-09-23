@@ -34,7 +34,7 @@ jobs:
         with:
           allowUpdates: true
           prerelease: false
-          name: v2.8.7 ${{ env.DATE }}
-          tag: v2.8.7-${{ env.EPOCH }}
+          name: v2.9.1 ${{ env.DATE }}
+          tag: v2.9.1-${{ env.EPOCH }}
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: output_dir/*
